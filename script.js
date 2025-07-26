@@ -1,23 +1,43 @@
 function clickOpenNavSideMobilBar() {
-    let mobil_bar = document.getElementsByTagName("nav")[0];
-    let bar = document.getElementsByClassName("bar")[0];
-    let closeBar = document.getElementsByClassName("close-bar")[0];
+  let mobil_bar = document.getElementsByTagName("nav")[0];
+  let bar = document.getElementsByClassName("bar")[0];
+  let closeBar = document.getElementsByClassName("close-bar")[0];
 
-    mobil_bar.classList.add("forMobilBar");
-    bar.style.display = "none";         
-    closeBar.style.display = "flex";
+  mobil_bar.classList.add("forMobilBar");
+  bar.style.display = "none";         
+  closeBar.style.display = "flex";
+
+  closeMenuOnOutsideClick();
+}
+
+function closeMenuOnOutsideClick() {
+  // Получаем элементы один раз, чтобы сравнивать
+  const mobil_bar = document.getElementsByTagName("nav")[0];
+  const bar = document.getElementsByClassName("bar")[0];
+
+  function handler(event) {
+    // Если клик вне навигации и не по кнопке открытия
+    if (!mobil_bar.contains(event.target) && event.target !== bar && !bar.contains(event.target)) {
+      clickCloseMenu();
+      document.removeEventListener("click", handler);
+    }
+  }
+
+  document.addEventListener("click", handler);
 }
 
 function clickCloseMenu() {
-    let mobil_bar = document.getElementsByTagName("nav")[0];
-    let bar = document.getElementsByClassName("bar")[0];
-    let closeBar = document.getElementsByClassName("close-bar")[0];
+  let mobil_bar = document.getElementsByTagName("nav")[0];
+  let bar = document.getElementsByClassName("bar")[0];
+  let closeBar = document.getElementsByClassName("close-bar")[0];
 
-    mobil_bar.classList.remove("forMobilBar");
-    bar.style.display = "flex";        
-    closeBar.style.display = "none";    
-    document.body.style.backgroundColor = "";
+  mobil_bar.classList.remove("forMobilBar");
+  bar.style.display = "flex";        
+  closeBar.style.display = "none";    
+  document.body.style.backgroundColor = "";
 }
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll(".menu-button");
   
