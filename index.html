@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <!-- Основные метатеги -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title и description -->
+    <title>Coffee Go — Best and Tasty Coffee</title>
+    <meta name="description" content="Coffee Go — rahat və zövqlü kofe məkanı. Hər fincanımız sevgi və qayğı ilə hazırlanır. Dadlı içkilər, soyuq və isti qəhvələr, milkshake-lər. Sizi gözləyirik!" />
+    <meta name="keywords" content="kofe, coffee, coffee shop, milkshake, cold drinks, azərbaycan, baku, dadlı qəhvə, kofe mağazası, latte, espresso, mocha" />
+    <meta name="author" content="Sənin Adın" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="az" />
+    <meta name="theme-color" content="#C2996F" />
+
+    <!-- Open Graph (Facebook, LinkedIn, другие соцсети) -->
+    <meta property="og:title" content="Coffee Go — Dadlı və Rahat Kofe Məkanı" />
+    <meta property="og:description" content="Dadlı kofe, rahat məkan və xüsusi atmosfer. Coffee Go-da hər fincan sevgi ilə hazırlanır!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://saitin-adi.com" />
+    <meta property="og:image" content="https://saitin-adi.com/assets/og-image.jpg" />
+    <meta property="og:locale" content="az_AZ" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Coffee Go — Dadlı və Rahat Kofe Məkanı" />
+    <meta name="twitter:description" content="Coffee Go-da dadlı içkilər və rahat məkan sizi gözləyir." />
+    <meta name="twitter:image" content="https://saitin-adi.com/assets/twitter-image.jpg" />
+    <meta name="twitter:site" content="@səninTwitterAdın" />
+    <meta name="twitter:creator" content="@səninTwitterAdın" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/favicon-32x32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
+
+    <!-- Дополнительно для SEO и улучшения UX -->
+    <meta http-equiv="content-language" content="az" />
+    <meta name="distribution" content="global" />
+    <meta name="rating" content="general" />
+    <meta name="revisit-after" content="7 days" />
+
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./assets/favicon-32x32.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Parisienne&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="ctr">
+        <a href="#homelogo">
+            <img src="./assets/logo.svg" alt="CoffeeGo logo" class="logo">
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#menu" id="scrollToMenu">Menu</a></li>
+                <li><a href="#gallery" id="scrollToGallery">Qalereya</a></li>
+                <li><a href="#locations" id="scrollToLocations">Filiallar</a></li>
+                <li><a href="#contact" id="scrollToContacts">Əlaqə</a></li>
+                <li><a href="https://wolt.com/en/aze/baku/coffee_go?srsltid=AfmBOopO1O-c9hDWGcKqChmYyXXqk8UhZ8g7gkRhZxGjF_ZTCvGSTF6M" class="delivery" target="_blank">Çatdırılma</a></li>
+            </ul>
+        </nav>
+        <button class="bar" onclick="clickOpenNavSideMobilBar()">
+            <img src="./assets/icon-menu.svg" alt="menu icon">
+        </button>
+        <button class="close-bar" onclick="clickCloseMenu()" style="display:none;">
+            <img src="./assets/icon-menu-close.svg" alt="close menu icon">
+        </button>
+    </header>
+
+    <main class="ctr">
+        
+        <section class="hero">
+            <img src="./assets/img1.webp" alt="image of coffeeshop" class="hero-img">
+            <div class="hero-text">
+                <h1>Coffee Go</h1>
+                <p>
+                    Kofe ətirinin ətri ilə dolu, rahat məkanımızda istirahət edin. Hər fincanımız sevgi və qayğı ilə hazırlanır. Bizimlə hər anınız dadlı və xüsusi olsun. Sizi gözləyirik!
+                </p>
+                <button class="hero-button" id="scrollToMenuButton">Menuya bax</button>
+            </div>
+        </section>
+
+        <section class="menu">
+            <h2>Menu</h2>
+            <div class="menu-bar">
+                <button class="menu-button" id="coffee-cold-drinks">Coffee Cold Drinks</button>
+                <button class="menu-button" id="milkshakes">Milkshake</button>
+                <button class="menu-button">Cold Alcohol Cocktails</button>
+                <button class="menu-button">Fresh Juice</button>
+                <button class="menu-button">Lemonade</button>
+                <button class="menu-button">Cold Drinks</button>
+                <button class="menu-button">Ice Cream</button>
+                <button class="menu-button">Cocktails With Fruits</button>
+                <button class="menu-button" id="delicious-coffee">Delicious Coffee</button>
+            </div>
+
+            <div class="menu-items-iced-coffee">
+                <div class="menu-item">
+                    <img src="./assets/iced-coffee.avif" alt="iced coffee">
+                    <h3>Iced Coffee</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span>
+                            <span class="price-itself">5 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+
+                        <div class="price-row">
+                            <span>Medium</span>
+                            <span class="price-itself">7 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./assets/iced-latte.avif" alt="iced latte">
+                    <h3>Iced Latte</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span>
+                            <span class="price-itself">6 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+
+                        <div class="price-row">
+                            <span>Medium</span>
+                            <span class="price-itself">8 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./assets/iced-raf.avif" alt="iced raf">
+                    <h3>Iced Raf</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span>
+                            <span class="price-itself">6 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+
+                        <div class="price-row">
+                            <span>Medium</span>
+                            <span class="price-itself">8 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="./assets/iced-caramel-mackiato.avif" alt="iced caramel mackiato">
+                    <h3>Iced Caramel Macchiato</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span>
+                            <span class="price-itself">6 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+
+                        <div class="price-row">
+                            <span>Medium</span>
+                            <span class="price-itself">8 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./assets/iced-frappucino.avif" alt="iced frappuccino">
+                    <h3>Iced Frappuccino</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span>
+                            <span class="price-itself">6 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+
+                        <div class="price-row">
+                            <span>Medium</span>
+                            <span class="price-itself">8 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./assets/iced-mocha.avif" alt="iced mocha">
+                    <h3>Iced Mocha</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span>
+                            <span class="price-itself">6 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+
+                        <div class="price-row">
+                            <span>Medium</span>
+                            <span class="price-itself">8 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./assets/iced-spannish-latte.avif" alt="iced spannish latte">
+                    <h3>Iced Spannish Latte</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span>
+                            <span class="price-itself">6 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+
+                        <div class="price-row">
+                            <span>Medium</span>
+                            <span class="price-itself">8 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./assets/coffee-glace.avif" alt="coffee glace">
+                    <h3>Coffee Glace</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span>
+                            <span class="price-itself">6 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+
+                        <div class="price-row">
+                            <span>Medium</span>
+                            <span class="price-itself">8 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./assets/noimg.jpg" alt="coffee go espresso tiramisu">
+                    <h3>Coffee Go Espresso Tiramisu</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span>
+                            <span class="price-itself">6 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+
+                        <div class="price-row">
+                            <span>Medium</span>
+                            <span class="price-itself">8 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./assets/noimg.jpg" alt="bumblebee coffee">
+                    <h3>Bumblebee Coffee</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span>
+                            <span class="price-itself">6 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+
+                        <div class="price-row">
+                            <span>Medium</span>
+                            <span class="price-itself">8 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="menu-items-milkshakes">
+                <div class="menu-item">
+                    <img src="./assets/milk-shakes/banana.avif" alt="banana milkshake">
+                    <h3>Banana Milkshake</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span>
+                            <span class="price-itself">6.5 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+
+                        <div class="price-row">
+                            <span>Medium</span>
+                            <span class="price-itself">7.5 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./assets/milk-shakes/vanilla.avif" alt="vanilla">
+                    <h3>Vanilla Milkshake</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span>
+                            <span class="price-itself">6.5 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+
+                        <div class="price-row">
+                            <span>Medium</span>
+                            <span class="price-itself">7.5 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./assets/milk-shakes/strawberry.avif" alt="strawberry milkshake">
+                    <h3>Strawberry Milkshake</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span>
+                            <span class="price-itself">6.5 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+
+                        <div class="price-row">
+                            <span>Medium</span>
+                            <span class="price-itself">7.5  <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./assets/milk-shakes/chocolate.avif" alt="chocolate milkshake">
+                    <h3>Chocolate Milkshake</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span>
+                            <span class="price-itself">6.5 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+
+                        <div class="price-row">
+                            <span>Medium</span>
+                            <span class="price-itself">7.5 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./assets/milk-shakes/oreo.avif" alt="oreo milkshake">
+                    <h3>Oreo Milkshake</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span>
+                            <span class="price-itself">6.5 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+
+                        <div class="price-row">
+                            <span>Medium</span>
+                            <span class="price-itself">7.5 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./assets/milk-shakes/caramel.avif" alt="caramel milkshake">
+                    <h3>Caramel Milkshake</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span>
+                            <span class="price-itself">6.5 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+
+                        <div class="price-row">
+                            <span>Medium</span>
+                            <span class="price-itself">7.5 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./assets/milk-shakes/kitkat.avif" alt="kitkat milkshake">
+                    <h3>KitKat Milkshake</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span>
+                            <span class="price-itself">6.5 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+
+                        <div class="price-row">
+                            <span>Medium</span>
+                            <span class="price-itself">7.5 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="menu-items-delicious-coffee">
+               
+                <div class="menu-item">
+                    <img src="./assets/coffee/piccolo-latte.avif" alt="piccollo latte">
+                    <h3>Piccolo Latte</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span><span class="price-itself">6.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Medium</span><span class="price-itself">7.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Large</span><span class="price-itself">8.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+            
+                <div class="menu-item">
+                    <img src="./assets/coffee/mocha.avif" alt="mocha">
+                    <h3>Mocha</h3>
+                    <div class="prices">
+
+                        <div class="price-row">
+                            <span>Small</span><span class="price-itself">6.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Medium</span><span class="price-itself">7.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Large</span><span class="price-itself">8.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./assets/coffee/white-mocha.avif" alt="white mocha">
+                    <h3>White Mocha</h3>
+
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span><span class="price-itself">6.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Medium</span><span class="price-itself">7.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Large</span><span class="price-itself">8.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./assets/coffee/caramel-macchiato.avif" alt="caramel macchiato">
+                    <h3>Caramel Macchiato</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span><span class="price-itself">6.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Medium</span><span class="price-itself">7.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Large</span><span class="price-itself">8.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./assets/coffee/half-half-winter.avif" alt="half half winter coffee">
+                    <h3>Half-Half Winter</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span><span class="price-itself">6.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Medium</span><span class="price-itself">7.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Large</span><span class="price-itself">8.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                           
+                <div class="menu-item">
+                    <img src="./assets/coffee/breve.avif" alt="breve coffee">
+                    <h3>Breve</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span><span class="price-itself">6.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Medium</span><span class="price-itself">7.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Large</span><span class="price-itself">8.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./assets/coffee/coffee-viena.avif" alt="coffee vienna">
+                    <h3>Coffee Vienna</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span><span class="price-itself">6.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Medium</span><span class="price-itself">7.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Large</span><span class="price-itself">8.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./assets/coffee/bicherin.avif" alt="bicherin coffee">
+                    <h3>Bicherin</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span><span class="price-itself">6.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Medium</span><span class="price-itself">7.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Large</span><span class="price-itself">8.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./assets/coffee/spannish-coffee.avif" alt="spannish coffee">
+                    <h3>Spanish Coffee</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span><span class="price-itself">6.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Medium</span><span class="price-itself">7.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Large</span><span class="price-itself">8.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./assets/coffee/raf.avif" alt="raf coffee">
+                    <h3>Raf</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span><span class="price-itself">6.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Medium</span><span class="price-itself">7.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Large</span><span class="price-itself">8.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./assets/noimg.jpg" alt="special pumpkin latte">
+                    <h3>Special Pumpkin Latte</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span><span class="price-itself">6.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Medium</span><span class="price-itself">7.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Large</span><span class="price-itself">8.0 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./assets/coffee/coffee-go-special.avif" alt="coffee go special">
+                    <h3>Coffee Go Special</h3>
+                    <div class="prices">
+                        <div class="price-row">
+                            <span>Small</span><span class="price-itself">6.5 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Medium</span><span class="price-itself">7.5 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Large</span><span class="price-itself">8.5 <img src="./assets/coin.png" alt="manat icon" id="azn-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+            
+            </div>
+        </section>
+
+        <div class="gallery">
+            <h2>Qalereya</h2>
+            <div class="gallery-images">
+                <img src="./assets/gallery/pic1.webp" alt="coffe cup at coffego holed by hand" class="gallery-image">
+                <img src="./assets/gallery/pic2.webp" alt="coffego exterior" class="gallery-image">
+                <img src="./assets/gallery/pic3.webp" alt="icecream scoop with mint" class="gallery-image">
+                <img src="./assets/gallery/pic4.webp" alt="another coffego exterior" class="gallery-image">
+            </div>
+        </div>
+
+        <section class="filiallar">
+            <h2>Filiallarımız</h2>
+            <div class="ataturk">
+                <h3>Atatürk Filialı</h3>
+                <p>
+                    47, Atatürk prospekti
+                </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1283.0662331305566!2d49.845743636536675!3d40.41174952574027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4030873468ba1a7b%3A0xd81cb1a1edce2eb!2sCoffee%20Go%20Atat%C3%BCrk!5e0!3m2!1sen!2saz!4v1753475409837!5m2!1sen!2saz"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="mammadamin">
+                <h3>CoffeeGo 3</h3>
+                <p>
+                    5, Məmmədəmin Rəsulzadə küçəsi
+                </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1519.9082767394536!2d49.835776857373915!3d40.36859179999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307db69f5f7591%3A0xbc68b03178ed80fa!2sCoffee%20Go%203!5e0!3m2!1sen!2saz!4v1753475748083!5m2!1sen!2saz" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="hidayetzade">
+                <h3>Hidayətzadə Filialı</h3>
+                <p>
+                    Ismayil, 30 Hidayetzade, Bakı
+                </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1303.6494446494792!2d49.86708457593519!3d40.39528166162374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307db03f8b0499%3A0xb155c6a0ba2e80ef!2sCoffee%20Go!5e0!3m2!1sen!2saz!4v1753477000241!5m2!1sen!2saz" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="istiqlaliyyet">
+                <h3>İstiqlaliyyət Filialı</h3>
+                <p>
+                    İstiqlaliyyət küçəsi
+                </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d512.8505365936611!2d49.83202043007571!3d40.36845225663567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307db633f50ff7%3A0x14b290d1965dc9da!2sCoffee%20Go!5e0!3m2!1sen!2saz!4v1753477171772!5m2!1sen!2saz"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <section class="contacts">
+        <h2>Əlaqə</h2>
+
+        <div class="contact-row">
+            <p>📌İ.Hidayətzadə 30</p>
+            <span>+994 12 566-48-35</span>
+        </div>
+
+        <div class="contact-row">
+            <p>📌Ə.Əlizadə 2A</p>
+            <span> +994 51 378-58-99</span>
+        </div>
+
+        <div class="contact-row">
+            <p>📌Atatürk pr 47</p>
+             <span>+994 55 980-80-45</span>
+        </div>
+
+        <div class="contact-row">
+            <p>📌Dalga Beach Aquapark Resort</p>
+            <span>+994 55 980-80-45</span>
+        </div>
+
+        <div class="socials">
+            <a href="https://www.instagram.com/coffeegobaku/?hl=en" target="_blank">
+                <img src="./insta-icon.svg" alt="instagram icon">
+            </a>
+            <a href="https://www.facebook.com/coffeegobaku/" target="_blank">
+                <img src="./facebook-icon.svg" alt="facebook icon">
+            </a>
+        </div>
+    </section>
+
+
+
+    </main>
+    <a href="#" id="scrollToTopBtn" class="scroll-to-top">
+        <img src="./up-icon.png" alt="scroller to top" class="scroller">
+    </a>
+    <script src="script.js"></script>
+</body>
+</html>
