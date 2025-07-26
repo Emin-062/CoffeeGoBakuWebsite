@@ -5,8 +5,7 @@ function clickOpenNavSideMobilBar() {
 
     mobil_bar.classList.add("forMobilBar");
     bar.style.display = "none";         
-    closeBar.style.display = "flex";     
-    document.body.style.backgroundColor = "hsl(233, 8%, 79%)";
+    closeBar.style.display = "flex";
 }
 
 function clickCloseMenu() {
