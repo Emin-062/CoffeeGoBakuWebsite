@@ -551,7 +551,7 @@ footer {
     }
 
     .ctr {
-        padding-inline: 5%;
+        padding-inline: 3%;
     }
 
     iframe {
@@ -622,13 +622,29 @@ footer {
         "item2"
         "item3"
         "item4";
-        grid-template-columns: 0.6fr;
+        grid-template-columns: 1fr;
     }
 
     
 }
 
 @media (max-width: 440px) {
+    .gallery-images {
+        gap: 1rem;
+    }
+    
+    iframe {
+        height: 180px;
+    }
+
+    .hero-button {
+        width: 90%;
+    }
+
+    .ctr {
+        padding-inline: 2%;
+    }
+
     .hero p {
         font-size: 1rem;
     }
@@ -651,7 +667,7 @@ footer {
 
     .menu-button {
         font-size: 1rem;
-        width: 80%;
+        width: 90%;
     }
 
     footer p {
