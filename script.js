@@ -124,7 +124,7 @@ function updatePosition() {
   const viewportHeight = window.innerHeight;
 
   scrollBtn.style.top = scrollTop + viewportHeight - scrollBtn.offsetHeight - 20 + 'px';
-  scrollBtn.style.left = '0px';
+  scrollBtn.style.right = '0px';
 
   if (header) {
     const headerBottom = header.getBoundingClientRect().bottom;
@@ -140,23 +140,7 @@ updatePosition();
 window.addEventListener('scroll', updatePosition);
 window.addEventListener('resize', updatePosition);
 
-const blackHeart = document.getElementById('blackHeart');
-const redHeart = document.getElementById('redHeart');
 
-function toggleHearts() {
-  blackHeart.classList.toggle('hidden');
-  redHeart.classList.toggle('hidden');
-
-  // Если красное сердце видно — включаем пульсацию
-  if (!redHeart.classList.contains('hidden')) {
-    redHeart.classList.add('pulse');
-  } else {
-    redHeart.classList.remove('pulse');
-  }
-}
-
-blackHeart.addEventListener('click', toggleHearts);
-redHeart.addEventListener('click', toggleHearts);
 
 
 
