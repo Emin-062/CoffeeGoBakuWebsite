@@ -46,8 +46,15 @@ document.addEventListener("DOMContentLoaded", () => {
     "coffee-cold-drinks": ".menu-items-iced-coffee",
     "milkshakes": ".menu-items-milkshakes",
     "delicious-coffee": ".menu-items-delicious-coffee",
-    // Если появятся другие категории, добавь сюда
-    // "cold-alcohol-cocktails": ".menu-items-cold-alcohol",
+    "fresh-juice": ".menu-items-fresh-juice",
+    "lemonade": ".menu-items-lemonade",
+    "classic-coffee": ".menu-items-classic-coffee",
+    "specialty-tea": ".menu-items-specialty-tea",
+    "ice-cream": ".menu-items-ice-cream",
+    "hot-drinks": ".menu-items-hot-drinks",
+    "cold-drinks": ".menu-items-cold-drinks",
+    "cocktails-with-fruits": ".menu-items-cocktails-with-fruits",
+    "cold-alcohol": ".menu-items-cold-alcohol"
   };
 
   // Все меню-контейнеры — по значениям из menuMap

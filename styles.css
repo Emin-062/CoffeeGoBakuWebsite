@@ -181,7 +181,16 @@ body {
 
 .menu-items-iced-coffee,
 .menu-items-milkshakes,
-.menu-items-delicious-coffee {
+.menu-items-delicious-coffee,
+.menu-items-fresh-juice,
+.menu-items-lemonade,
+.menu-items-classic-coffee,
+.menu-items-specialty-tea,
+.menu-items-ice-cream,
+.menu-items-hot-drinks,
+.menu-items-cold-drinks,
+.menu-items-cocktails-with-fruits,
+.menu-items-cold-alcohol {
   display: none;
   flex-wrap: wrap;
   gap: 2rem;
@@ -193,7 +202,16 @@ body {
 
 .menu-items-iced-coffee.active,
 .menu-items-milkshakes.active, 
-.menu-items-delicious-coffee.active {
+.menu-items-delicious-coffee.active,
+.menu-items-fresh-juice.active,
+.menu-items-lemonade.active,
+.menu-items-classic-coffee.active,
+.menu-items-specialty-tea.active,
+.menu-items-ice-cream.active,
+.menu-items-hot-drinks.active,
+.menu-items-cold-drinks.active,
+.menu-items-cocktails-with-fruits.active,
+.menu-items-cold-alcohol.active {
   display: flex;
 }
 
@@ -212,6 +230,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 300px;
     width: 100%;
+    height: 350px;
     background-color: rgba(236, 212, 236, 0.5);
     color: #331d12;
 
