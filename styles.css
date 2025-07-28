@@ -193,7 +193,8 @@ body {
 .menu-items-hot-drinks,
 .menu-items-cold-drinks,
 .menu-items-cocktails-with-fruits,
-.menu-items-cold-alcohol {
+.menu-items-cold-alcohol,
+.menu-items-extras {
   display: none;
   flex-wrap: wrap;
   gap: 2rem;
@@ -214,7 +215,8 @@ body {
 .menu-items-hot-drinks.active,
 .menu-items-cold-drinks.active,
 .menu-items-cocktails-with-fruits.active,
-.menu-items-cold-alcohol.active {
+.menu-items-cold-alcohol.active,
+.menu-items-extras.active {
   display: flex;
 }
 
@@ -521,7 +523,12 @@ iframe {
     }
 
     .mammadamin, .hidayetzade, .istiqlaliyyet, .ataturk {
+        width: 50%;
+    }
+
+    iframe {
         width: 80%;
+        height: 150px;
     }
 
     .hero-img {

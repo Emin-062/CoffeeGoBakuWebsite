@@ -54,7 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "hot-drinks": ".menu-items-hot-drinks",
     "cold-drinks": ".menu-items-cold-drinks",
     "cocktails-with-fruits": ".menu-items-cocktails-with-fruits",
-    "cold-alcohol": ".menu-items-cold-alcohol"
+    "cold-alcohol": ".menu-items-cold-alcohol",
+    "extras": ".menu-items-extras"
   };
 
   // Все меню-контейнеры — по значениям из menuMap
