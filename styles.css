@@ -80,7 +80,7 @@ header {
 .hero {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 5rem;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 8%;
@@ -330,6 +330,7 @@ body {
     flex-direction: column;
     margin-top: 15%;
     gap: 3rem;
+    font-family: "Montserrat", sans-serif;
 }
 
 .ataturk {
@@ -381,6 +382,7 @@ iframe {
     margin-top: 10%;
     background-color: white;
     color: #362C27;
+    font-family: "Montserrat", sans-serif;
 }
 
 .contacts h2 {
